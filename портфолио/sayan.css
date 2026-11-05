@@ -1,0 +1,283 @@
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --accent: #38bdf8;
+    --text: #ffffff;
+    --muted: #a1a1aa;
+    --border: #27272a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 40px 10%;
+    overflow-x: hidden;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ================= HERO SECTION (ШАПКА) ================= */
+.hero-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+h1 {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.badge {
+    color: var(--muted);
+    font-size: 14px;
+    display: block;
+    font-weight: 500;
+}
+
+/* Вертикальное фото справа как в Figma */
+.hero-avatar img {
+    width: 210px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.short-desc {
+    width: 100%;
+}
+
+.short-desc h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.short-desc p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* ================= СЕКЦИИИ И ЗАГОЛОВКИ ================= */
+.section {
+    margin-bottom: 45px;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+
+/* ================= КАРТОЧКИ (СТЕК И ПРОЕКТЫ) ================= */
+.skills-container, .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skill-card, .project-card {
+    background: var(--card-bg);
+    padding: 22px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.skill-card strong, .project-card h3 {
+    color: var(--text);
+    display: block;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.project-card p {
+    margin-bottom: 8px;
+}
+
+/* ================= КНОПКИ И ФОРМА ================= */
+.btn, .open-modal {
+    display: inline-block;
+    background: transparent;
+    color: var(--accent);
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid var(--accent);
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s ease;
+}
+
+.btn:hover, .open-modal:hover {
+    background: rgba(56, 189, 248, 0.1);
+}
+
+.contact-list {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.contact-list strong {
+    color: var(--text);
+}
+
+.contact-form {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.form-group input, .form-group textarea {
+    padding: 12px;
+    background: #121212;
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: var(--accent);
+}
+
+.error-msg {
+    color: #f87171;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* ================= МОДАЛЬНОЕ ОКНО ================= */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 420px;
+    position: relative;
+    border: 1px solid var(--border);
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--muted);
+}
+
+.close-btn:hover {
+    color: var(--text);
+}
+
+/* ================= ФУТЕР И АДАПТИВ ================= */
+footer {
+    text-align: left;
+    padding-top: 25px;
+    margin-top: 40px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.navbar, .burger {
+    display: none;
+}
+
+@media (max-width: 650px) {
+    body {
+        padding: 20px 5%;
+    }
+    
+    .hero-header {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-avatar img {
+        width: 180px;
+        height: 230px;
+    }
+}

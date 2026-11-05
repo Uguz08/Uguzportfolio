@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Uguz Kolpochov</title>
+    <link rel="stylesheet" href="sayan.css">
+</head>
+<body>
+
+    <main>
+        <!-- Навигация (Кнопки меню) -->
+        <nav class="top-nav">
+            <a href="#hero" class="nav-btn">Главная</a>
+            <a href="#about" class="nav-btn">О себе</a>
+            <a href="#projects" class="nav-btn">Проекты</a>
+            <a href="#contacts" class="nav-btn">Контакты</a>
+        </nav>
+
+        <!-- Главный блок с фото -->
+        <section id="hero" class="hero-section">
+            <div class="hero-header">
+                <div class="hero-text">
+                    <h1>HI I AM UGUZ<br>KOLPOCHOV</h1>
+                    <span class="badge">Backend Developer / IT Student</span>
+                </div>
+                <div class="hero-avatar">
+                    <img src="WhatsApp Image 2026-11-05 at 22.07.02.jpeg" alt="Uguz Kolpochov">
+                </div>
+            </div>
+
+            <div class="short-desc">
+                <h3>Краткое описание</h3>
+                <p>Студент 2-го курса колледжа «Ала-Тоо». Специализируюсь на бэкенд-разработке и веб-технологиях.</p>
+            </div>
+        </section>
+
+        <!-- О себе -->
+        <section id="about" class="section">
+            <h2>ABOUT ME</h2>
+            <p>Мне 17 лет, я активно развиваюсь в сфере IT. В данный момент учусь на втором курсе колледжа «Ала-Тоо», параллельно прохожу специализированные курсы по программированию, чтобы глубже погрузиться в бэкенд.</p>
+            <p>Помимо учебы, ценю дисциплину и последовательный прогресс — ранее долгое время занимался силовыми тренировками в зале, что выработало во мне целеустремленность и системный подход к любой задаче, будь то спорт или написание кода.</p>
+        </section>
+
+        <!-- Технологии -->
+        <section id="skills" class="section">
+            <h2>Технологии и стек</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <strong>Backend Focus:</strong>
+                    <p>Go (Golang) — основной язык, который сейчас активно изучаю для построения надежных сервисов.</p>
+                    <p>JavaScript — база для скриптов и интерактивности.</p>
+                </div>
+                <div class="skill-card">
+                    <strong>Frontend & Web Layout:</strong>
+                    <p>HTML5 / CSS3 — уверенно верстаю адаптивные и чистые интерфейсы.</p>
+                </div>
+                <div class="skill-card">
+                    <strong>Инструменты (Tools):</strong>
+                    <p>Git / GitHub, VS Code, Figma</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Проекты (без кнопок Подробнее) -->
+        <section id="projects" class="section">
+            <h2>ПРОЕКТЫ</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Личный сайт-портфолио</h3>
+                    <p><strong>Стек:</strong> HTML, CSS, JavaScript.</p>
+                    <p>Описание: Адаптивный веб-сайт для презентации моих навыков, учебных проектов и достижений.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Backend-сервисы на Go (в процессе)</h3>
+                    <p><strong>Стек:</strong> Go.</p>
+                    <p>Описание: Практические проекты и микросервисы, разрабатываемые в рамках самостоятельного обучения и курсов.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Академические успехи</h3>
+                    <p>Победа в олимпиаде по программированию</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Контакты и форма связи -->
+        <section id="contacts" class="section">
+            <h2>КОНТАКТЫ (CONTACT / FOOTER)</h2>
+            <ul class="contact-list">
+                <li><strong>Telegram:</strong> @kylychbe_kov</li>
+                <li><strong>GitHub:</strong> https://github.com/Uguz08</li>
+                <li><strong>Email:</strong> uguzk175@gmail.com</li>
+                <li><strong>Локация:</strong> Бишкек, Кыргызстан</li>
+            </ul>
+
+            <form id="contactForm" class="contact-form">
+                <h3>Написать мне</h3>
+                <div class="form-group">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" id="name" placeholder="Введите имя">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="example@mail.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" placeholder="Ваше сообщение..."></textarea>
+                </div>
+                <button type="submit" class="btn">Отправить</button>
+                <p id="formError" class="error-msg"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Uguz Kolpochov. Бишкек, Кыргызстан</p>
+    </footer>
+
+    <script src="sayan.js"></script>
+    <script src="sayan.css"></script>
+
+</body>
+</html>
